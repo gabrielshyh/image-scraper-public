@@ -1,16 +1,16 @@
-<!-- Google OCR Public README -->
+<!-- image-scraper Public README -->
 <!-- Formatted following marklovestech GitHub repository layout -->
 
 <div align="center">
 
-# Google OCR
+# image-scraper
 
-**A lightweight Google Cloud Vision OCR integration for automated document and menu text extraction.**
+**A high-efficiency OCR and text formatting pipeline that converts images into structured Markdown for OpenRouter LLMs.**
 
 ![platform](https://img.shields.io/badge/platform-Node.js-lightgrey)
 ![language](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)
 ![api](https://img.shields.io/badge/API-Google%20Cloud%20Vision-blue)
-![status](https://img.shields.io/badge/status-production--ready-brightgreen)
+![status](https://img.shields.io/badge/status-active%20development-yellow)
 
 </div>
 
@@ -18,24 +18,29 @@
 
 ## What it does
 
-Extracting clean, reliable text from physical documents, paper menus, and receipts is a fundamental building block for modern AI agents and document processing pipelines. Raw image uploads often suffer from uneven lighting, multi-column layouts, and unformatted text blocks.
+Passing raw image files directly to multimodal vision LLMs is inefficient, consuming massive token counts and API credits on repetitive visual processing. 
 
-Google OCR is a dedicated integration designed to interface seamlessly with the Google Cloud Vision API. It ingests image inputs, performs Optical Character Recognition (OCR), formats messy text streams, and produces structured text optimized for downstream AI agent processing.
+`image-scraper` is a specialized pre-processing pipeline that combines **Google Cloud Vision OCR** with advanced text formatters (**Docling** / **MarkItDown**). It ingests document, receipt, and menu images, extracts raw text with computer vision, and transforms messy layout blocks into clean, structured Markdown feeds. By replacing expensive vision tokens with compact Markdown, `image-scraper` enables OpenRouter LLMs to reason and make decisions with maximum accuracy and cost efficiency.
 
 ## Highlights
 
-- **Optical Character Recognition.** Leverages Google Cloud Vision API for high-accuracy text detection across complex visual layouts.
-- **Menu & Document Parsing.** Specialized text extraction tailored for multi-column restaurant menus, invoices, and physical documents.
-- **Agent Integration.** Clean interface designed for plug-and-play use in AI agent workflows.
-- **Resilient Preprocessing.** Built-in data formatting and handling for noisy image inputs.
+- **Google Cloud Vision OCR.** High-accuracy text detection across complex visual documents, receipts, and multi-column menus.
+- **Structured Markdown Formatting.** Converts raw computer vision OCR outputs into clean, semantically structured Markdown using Docling / MarkItDown.
+- **Token & Credit Optimization.** Strips visual bloat to minimize token consumption and reduce API credit usage for OpenRouter LLMs.
+- **LLM & Agent Ready.** Produces optimized Markdown context feeds designed for seamless ingestion by AI agents and LLM decision engines.
 
 ## Tech Stack
 
 | Layer | Technology |
 |---|---|
 | **Runtime** | Node.js (ES Modules) |
-| **API Integration** | Google Cloud Vision API |
-| **Processing** | Text Formatting & Document Sanitization |
+| **Vision OCR** | Google Cloud Vision API |
+| **Text Formatter** | Docling / MarkItDown |
+| **Target LLM Platform** | OpenRouter LLMs & AI Agents |
+
+## Status
+
+**In active development now, beta version coming soon!**
 
 ## Why the source is private
 

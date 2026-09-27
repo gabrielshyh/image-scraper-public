@@ -40,7 +40,7 @@ Passing raw image files directly to multimodal vision LLMs is inefficient, consu
 
 ## Status
 
-**In active development now, beta version coming soon!**
+**In active development now, POC coming soon!**
 
 ## Why the source is private
 
